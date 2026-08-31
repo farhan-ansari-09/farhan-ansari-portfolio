@@ -1150,7 +1150,7 @@ export default function App() {
         </section>
 
         {/* About Section */}
-        <div className="static-grid-area">
+        
         <section id="about" className="section about-section">
           <div className="section-container">
             <div className="section-header">
@@ -2014,7 +2014,7 @@ export default function App() {
 
   </div>
 </section>
-</div>
+
       </main>
 
     </>
