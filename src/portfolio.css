@@ -799,7 +799,7 @@ img {
 }
 
 .section {
-    padding: 4rem 0;
+    padding: 3.5rem 0;
     position: relative;
     scroll-margin-top: 80px;
 }
@@ -851,7 +851,7 @@ img {
     margin-inline-start: 2rem;
 }
 
-.about-content {
+/* .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -937,7 +937,773 @@ img {
 
 .code-line.indent {
     padding-inline-start: 2rem;
+} */
+
+/* /* =========================================================
+   ABOUT SECTION
+   ========================================================= */
+
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
+
+.about-section {
+  position: relative;
+  width: 100%;
 }
+
+
+/* =========================================================
+   ABOUT CONTENT
+   ========================================================= */
+
+.about-content {
+  display: grid;
+
+  /*
+    Left = text + highlights
+    Right = code window
+  */
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 1fr);
+
+  gap: 70px;
+
+  align-items: center;
+
+  margin-top: 70px;
+}
+
+
+/* =========================================================
+   ABOUT TEXT
+   ========================================================= */
+
+.about-text-wrapper {
+  min-width: 0;
+  width: 100%;
+}
+
+.about-intro {
+  max-width: 700px;
+}
+
+.about-text {
+  margin: 0;
+
+  font-size: 1.2rem;
+  line-height: 1.8;
+
+  color: var(--text-secondary, #cbd5e1);
+}
+
+
+/* =========================================================
+   ABOUT HIGHLIGHTS
+   ========================================================= */
+
+.about-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  width: 100%;
+
+  margin-top: 55px;
+
+  padding: 28px 0;
+
+  border-top:
+    1px solid rgba(148, 163, 184, 0.18);
+
+  border-bottom:
+    1px solid rgba(148, 163, 184, 0.18);
+}
+
+
+/* =========================================================
+   INDIVIDUAL HIGHLIGHT
+   ========================================================= */
+
+.stat-item {
+  position: relative;
+
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    52px minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 14px;
+
+  background: transparent;
+
+  border: none;
+  border-radius: 0;
+
+  box-shadow: none;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   VERTICAL SEPARATOR
+   ========================================================= */
+
+.stat-item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  top: 4px;
+
+  width: 1px;
+
+  height: calc(100% - 8px);
+
+  background:
+    rgba(148, 163, 184, 0.18);
+}
+
+
+/* =========================================================
+   STAT ICON
+   ========================================================= */
+
+.stat-icon {
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid rgba(180, 120, 255, 0.45);
+
+  border-radius: 50%;
+
+  color: #b77aff;
+
+  font-size: 1.15rem;
+
+  background:
+    rgba(100, 70, 180, 0.06);
+
+  box-shadow:
+    0 0 18px rgba(170, 90, 255, 0.10);
+}
+
+
+/* =========================================================
+   SECOND ICON
+   ========================================================= */
+
+.stat-item:nth-child(2) .stat-icon {
+  color: #b77aff;
+
+  border-color:
+    rgba(180, 120, 255, 0.45);
+
+  box-shadow:
+    0 0 18px rgba(170, 90, 255, 0.10);
+}
+
+
+/* =========================================================
+   THIRD ICON
+   ========================================================= */
+
+.stat-item:nth-child(3) .stat-icon {
+  color: #42dfff;
+
+  border-color:
+    rgba(66, 223, 255, 0.4);
+
+  box-shadow:
+    0 0 18px rgba(66, 223, 255, 0.10);
+}
+
+
+/* =========================================================
+   STAT CONTENT
+   ========================================================= */
+
+.stat-content {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   STAT TITLE
+   ========================================================= */
+
+.stat-label {
+  margin: 0;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  color: #f1f5f9;
+
+  white-space: normal;
+}
+
+
+/* =========================================================
+   STAT DESCRIPTION
+   ========================================================= */
+
+.stat-description {
+  margin-top: 8px;
+
+  font-size: 0.78rem;
+
+  line-height: 1.45;
+
+  color: #94a3b8;
+
+  white-space: normal;
+}
+
+
+/* =========================================================
+   REMOVE OLD CARD HOVER EFFECT
+   ========================================================= */
+
+.about-stats .stat-item:hover {
+  transform: none;
+
+  background: transparent;
+
+  border: none;
+
+  border-color: transparent;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   CODE WINDOW
+   ========================================================= */
+
+.about-image-wrapper {
+  width: 100%;
+
+  min-width: 0;
+}
+
+.about-image-container {
+  width: 100%;
+}
+
+
+/* =========================================================
+   CODE BLOCK
+   ========================================================= */
+
+.code-block {
+  width: 100%;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(145, 100, 255, 0.28);
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(25, 38, 62, 0.95),
+      rgba(15, 25, 43, 0.98)
+    );
+
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+  transform: none;
+}
+
+
+/* =========================================================
+   CODE WINDOW HEADER
+   ========================================================= */
+
+.code-window-header {
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 18px;
+
+  border-bottom:
+    1px solid rgba(148, 163, 184, 0.12);
+
+  background:
+    rgba(10, 18, 32, 0.3);
+}
+
+
+/* =========================================================
+   WINDOW DOTS
+   ========================================================= */
+
+.code-window-dots {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.window-dot {
+  display: block;
+
+  width: 11px;
+  height: 11px;
+
+  border-radius: 50%;
+}
+
+
+/* Red */
+
+.dot-red {
+  background: #ff5f57;
+}
+
+
+/* Yellow */
+
+.dot-yellow {
+  background: #ffbd2e;
+}
+
+
+/* Green */
+
+.dot-green {
+  background: #28c840;
+}
+
+
+/* =========================================================
+   CODE FILE NAME
+   ========================================================= */
+
+.code-window-title {
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.75rem;
+
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   CODE CONTENT
+   ========================================================= */
+
+.code-content {
+  padding: 30px 32px 34px;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.95rem;
+
+  line-height: 2;
+}
+
+
+/* =========================================================
+   CODE LINE
+   ========================================================= */
+
+.code-line {
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CODE INDENT
+   ========================================================= */
+
+.code-line.indent {
+  padding-left: 30px;
+}
+
+
+/* =========================================================
+   CODE COLORS
+   ========================================================= */
+
+.code-keyword {
+  color: #b77aff;
+}
+
+.code-variable {
+  color: #42dfff;
+}
+
+.code-property {
+  color: #42dfff;
+}
+
+.code-operator {
+  color: #cbd5e1;
+}
+
+.code-brace,
+.code-bracket {
+  color: #ffc928;
+}
+
+.code-string {
+  color: #ffc928;
+}
+
+.code-comma,
+.code-semicolon {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1200px) {
+
+  .about-content {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(460px, 1fr);
+
+    gap: 65px;
+  }
+
+  .about-stats {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .stat-item {
+    grid-template-columns:
+      52px minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding: 0 12px;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+  }
+
+  .stat-description {
+    font-size: 0.78rem;
+  }
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .about-content {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(380px, 1fr);
+
+    gap: 45px;
+  }
+
+  .stat-item {
+    grid-template-columns:
+      46px minmax(0, 1fr);
+
+    gap: 10px;
+
+    padding: 0 8px;
+  }
+
+  .stat-icon {
+    width: 46px;
+    height: 46px;
+
+    font-size: 1rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+  }
+
+  .stat-description {
+    font-size: 0.72rem;
+  }
+
+  .code-content {
+    padding: 25px 24px 28px;
+
+    font-size: 0.82rem;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .about-content {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .about-image-wrapper {
+    width: 100%;
+
+    max-width: 750px;
+
+    margin: 0 auto;
+  }
+
+  .about-stats {
+    max-width: 750px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .about-content {
+    margin-top: 45px;
+
+    gap: 40px;
+  }
+
+
+  /* About paragraph */
+
+  .about-text {
+    font-size: 1rem;
+
+    line-height: 1.75;
+  }
+
+
+  /* Highlights become clean rows */
+
+  .about-stats {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    width: 100%;
+
+    margin-top: 35px;
+
+    padding: 0;
+  }
+
+
+  .stat-item {
+    display: grid;
+
+    grid-template-columns:
+      48px minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 20px 0;
+  }
+
+
+  /* Horizontal separators */
+
+  .stat-item:not(:last-child) {
+    border-bottom:
+      1px solid rgba(148, 163, 184, 0.15);
+  }
+
+
+  /* Remove desktop separators */
+
+  .stat-item:not(:last-child)::after {
+    display: none;
+  }
+
+
+  /* Icons */
+
+  .stat-icon {
+    width: 48px;
+    height: 48px;
+
+    font-size: 1rem;
+  }
+
+
+  /* Titles */
+
+  .stat-label {
+    font-size: 0.95rem;
+
+    line-height: 1.3;
+  }
+
+
+  /* Descriptions */
+
+  .stat-description {
+    margin-top: 6px;
+
+    font-size: 0.78rem;
+
+    line-height: 1.45;
+  }
+
+
+  /* Code window */
+
+  .code-window-header {
+    height: 42px;
+
+    padding: 0 14px;
+  }
+
+
+  .window-dot {
+    width: 9px;
+    height: 9px;
+  }
+
+
+  .code-window-title {
+    font-size: 0.65rem;
+  }
+
+
+  .code-content {
+    padding: 22px 18px 25px;
+
+    font-size: 0.72rem;
+
+    line-height: 1.9;
+
+    overflow-x: auto;
+  }
+
+
+  .code-line.indent {
+    padding-left: 18px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+  .about-content {
+    gap: 30px;
+  }
+
+
+  .about-text {
+    font-size: 1rem;
+
+    line-height: 1.7;
+  }
+
+
+  .about-stats {
+    margin-top: 30px;
+  }
+
+
+  .stat-item {
+    grid-template-columns:
+      44px minmax(0, 1fr);
+
+    gap: 14px;
+
+    padding: 17px 0;
+  }
+
+
+  .stat-icon {
+    width: 44px;
+    height: 44px;
+
+    font-size: 0.95rem;
+  }
+
+
+  .stat-label {
+    font-size: 1.4rem;
+  }
+
+
+  .stat-description {
+    font-size: 0.90rem;
+  }
+
+
+  .code-block {
+    border-radius: 9px;
+  }
+
+
+  .code-content {
+    padding: 18px 12px 20px;
+
+    font-size: 0.72rem;
+  }
+
+
+  .code-line.indent {
+    padding-left: 12px;
+  }
+}
+
+
 
 .code-keyword { color: var(--purple); }
 .code-variable { color: var(--cyan); }
@@ -1458,6 +2224,232 @@ img {
 .no-icon {
     gap: 0.7rem;
 }
+
+/* =========================================================
+   EXPERIENCE SECTION
+   ========================================================= */
+
+.experience-section {
+    position: relative;
+}
+
+
+/* Experience wrapper */
+
+.experience-list {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+
+/* Single experience entry */
+
+.experience-entry {
+    width: 100%;
+    padding-bottom: 4rem;
+}
+
+
+/* =========================================================
+   EXPERIENCE HEADER
+   ========================================================= */
+
+.experience-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 100%;
+}
+
+
+/* Company + Role */
+
+.experience-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+
+/* Company name */
+
+.experience-company {
+    font-family: var(--font-code);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 0.02em;
+}
+
+
+/* Location */
+
+.company-location {
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+
+/* Role */
+
+.experience-role {
+    margin: 0;
+
+    font-family: var(--font-code);
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    font-weight: 700;
+    line-height: 1.2;
+
+    color: var(--text-primary);
+
+    transition: color var(--transition);
+}
+
+
+/* Small interaction */
+
+.experience-entry:hover .experience-role {
+    color: var(--cyan);
+}
+
+
+/* Date */
+
+.experience-date {
+    flex-shrink: 0;
+
+    padding-top: 0.3rem;
+
+    font-family: var(--font-code);
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+
+    color: var(--text-muted);
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.experience-description {
+    max-width: 900px;
+
+    margin: 2.2rem 0 0;
+
+    font-size: 1.05rem;
+    line-height: 1.85;
+
+    color: var(--text-secondary);
+}
+
+
+/* =========================================================
+   SUBTLE SEPARATOR
+   ========================================================= */
+
+.experience-entry::after {
+    content: "";
+
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    margin-top: 3.5rem;
+
+    background: linear-gradient(
+        90deg,
+        var(--primary),
+        var(--cyan),
+        transparent
+    );
+
+    opacity: 0.35;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .experience-list {
+        margin-top: 3rem;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .experience-date {
+        order: -1;
+
+        padding-top: 0;
+
+        font-size: 0.75rem;
+    }
+
+    .experience-company {
+        font-size: 1rem;
+    }
+
+    .experience-role {
+        font-size: 1.7rem;
+    }
+
+    .experience-description {
+        margin-top: 1.5rem;
+
+        font-size: 0.98rem;
+        line-height: 1.75;
+    }
+
+    .experience-entry {
+        padding-bottom: 3rem;
+    }
+
+    .experience-entry::after {
+        margin-top: 2.5rem;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .experience-list {
+        margin-top: 2.5rem;
+    }
+
+    .experience-company {
+        font-size: 0.92rem;
+    }
+
+    .experience-role {
+        font-size: 1.45rem;
+    }
+
+    .experience-date {
+        font-size: 0.68rem;
+        letter-spacing: 0.08em;
+    }
+
+    .experience-description {
+        font-size: 0.92rem;
+        line-height: 1.7;
+    }
+}
     
 
 @keyframes shimmer {
@@ -1465,483 +2457,8 @@ img {
     100% { transform: translateX(100%); }
 }
 
-/* ================================
-   EXPERIENCE TIMELINE
-================================ */
 
-.timeline {
-    position: relative;
-    margin-top: 4rem;
-    padding-left: 4rem;
-}
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 0.45rem;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(
-        to bottom,
-        var(--primary),
-        var(--cyan),
-        transparent
-    );
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 4rem;
-}
-
-.timeline-marker {
-    position: absolute;
-    left: -4rem;
-    top: 2rem;
-
-    width: 16px;
-    height: 16px;
-
-    border-radius: 50%;
-    background: var(--primary);
-
-    border: 3px solid var(--bg-dark);
-
-    box-shadow:
-        0 0 0 3px var(--primary),
-        0 0 20px rgba(180, 120, 255, 0.5);
-
-    z-index: 2;
-}
-
-
-/* ================================
-   INTERNSHIP CARD
-================================ */
-
-.internship-card {
-    position: relative;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,0.025),
-            rgba(255,255,255,0)
-        ),
-        var(--bg-card);
-
-    border: 1px solid var(--border);
-    border-radius: 18px;
-
-    padding: 2.5rem;
-
-    overflow: hidden;
-
-    transition:
-        transform var(--transition),
-        border-color var(--transition),
-        box-shadow var(--transition);
-}
-
-.internship-card::before {
-    content: '';
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-
-    background: var(--gradient-1);
-}
-
-.internship-card:hover {
-    transform: translateY(-5px);
-
-    border-color: var(--primary);
-
-    box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.25),
-        0 0 25px rgba(180, 120, 255, 0.08);
-}
-
-
-/* ================================
-   TOP SECTION
-================================ */
-
-.experience-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
-}
-
-.timeline-year {
-    font-family: var(--font-code);
-    font-size: 0.9rem;
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    color: var(--primary);
-
-    margin-bottom: 0.8rem;
-}
-
-.timeline-title {
-    margin: 0 0 0.8rem;
-
-    font-family: var(--font-code);
-    font-size: 1.7rem;
-    font-weight: 700;
-
-    color: var(--cyan);
-}
-
-.timeline-company {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-
-    color: var(--primary);
-
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.timeline-company i {
-    font-size: 0.95rem;
-}
-
-.company-location {
-    color: var(--text-secondary);
-    font-weight: 400;
-}
-
-
-/* ================================
-   INTERNSHIP BADGE
-================================ */
-
-.internship-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-
-    padding: 0.6rem 1rem;
-
-    border-radius: 999px;
-
-    background: rgba(180, 120, 255, 0.1);
-
-    border: 1px solid rgba(180, 120, 255, 0.35);
-
-    color: var(--primary);
-
-    font-family: var(--font-code);
-    font-size: 0.8rem;
-    font-weight: 700;
-
-    white-space: nowrap;
-}
-
-.internship-badge i {
-    font-size: 0.8rem;
-}
-
-
-/* ================================
-   DIVIDER
-================================ */
-
-.experience-divider {
-    width: 100%;
-    height: 1px;
-
-    margin: 1.8rem 0;
-
-    background: linear-gradient(
-        90deg,
-        var(--border),
-        transparent
-    );
-}
-
-
-/* ================================
-   DESCRIPTION
-================================ */
-
-.timeline-description {
-    margin: 0 0 1.8rem;
-
-    color: var(--text-secondary);
-
-    font-size: 1rem;
-    line-height: 1.8;
-
-    max-width: 900px;
-}
-
-
-/* ================================
-   WORK / RESPONSIBILITIES
-================================ */
-
-.experience-work {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 0.9rem;
-
-    margin-bottom: 2rem;
-
-    padding: 1.4rem;
-
-    background: var(--bg-darker);
-
-    border: 1px solid var(--border);
-
-    border-radius: 12px;
-}
-
-.work-item {
-    display: flex;
-    align-items: flex-start;
-
-    gap: 0.7rem;
-
-    color: var(--text-secondary);
-
-    font-size: 0.92rem;
-
-    line-height: 1.6;
-}
-
-.work-item i {
-    flex-shrink: 0;
-
-    margin-top: 0.3rem;
-
-    color: #6ee7a8;
-
-    font-size: 0.85rem;
-}
-
-
-/* ================================
-   TECHNOLOGIES
-================================ */
-
-.experience-footer {
-    display: flex;
-    flex-direction: column;
-
-    gap: 1rem;
-}
-
-.experience-label {
-    display: flex;
-    align-items: center;
-
-    gap: 0.5rem;
-
-    font-family: var(--font-code);
-
-    color: var(--text-secondary);
-
-    font-size: 0.8rem;
-    font-weight: 600;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1px;
-}
-
-.experience-label i {
-    color: var(--primary);
-}
-
-.timeline-tags {
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 0.6rem;
-}
-
-.tag {
-    padding: 0.45rem 0.8rem;
-
-    background: var(--bg-darker);
-
-    border: 1px solid var(--border);
-
-    border-radius: 6px;
-
-    color: var(--primary);
-
-    font-family: var(--font-code);
-
-    font-size: 0.78rem;
-    font-weight: 600;
-
-    transition: all var(--transition-fast);
-}
-
-.tag:hover {
-    border-color: var(--primary);
-
-    background: rgba(180, 120, 255, 0.08);
-
-    transform: translateY(-2px);
-}
-
-/* ================================
-   TABLET
-================================ */
-
-@media (max-width: 1024px) {
-
-    .timeline {
-        padding-left: 3rem;
-    }
-
-    .timeline-marker {
-        left: -3rem;
-    }
-
-    .internship-card {
-        padding: 2rem;
-    }
-
-    .experience-work {
-        grid-template-columns: 1fr;
-    }
-
-    
-    
-}
-
-
-
-/* ================================
-   MOBILE
-================================ */
-
-@media (max-width: 768px) {
-
-    
-
-    .timeline {
-        padding-left: 2rem;
-        margin-top: 2.5rem;
-    }
-
-    .timeline::before {
-        left: 0.35rem;
-    }
-
-    .timeline-marker {
-        left: -2rem;
-        width: 13px;
-        height: 13px;
-    }
-
-    .internship-card {
-        padding: 1.5rem;
-        border-radius: 14px;
-    }
-
-    .experience-top {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .timeline-title {
-        font-size: 1.35rem;
-    }
-
-    .timeline-company {
-        flex-wrap: wrap;
-    }
-
-    .experience-work {
-        padding: 1rem;
-    }
-}
-
-
-/* ================================
-   SMALL MOBILE
-================================ */
-
-@media (max-width: 480px) {
-
-    .timeline {
-        padding-left: 1.5rem;
-    }
-
-    .timeline-marker {
-        left: -1.5rem;
-    }
-
-    .internship-card {
-        padding: 1.2rem;
-    }
-
-    .timeline-year {
-        font-size: 0.78rem;
-    }
-
-    .timeline-title {
-        font-size: 1.15rem;
-    }
-
-    .timeline-description {
-        font-size: 0.9rem;
-    }
-
-    .work-item {
-        font-size: 0.85rem;
-    }
-
-    .tag {
-        font-size: 0.7rem;
-        padding: 0.4rem 0.65rem;
-    }
-}
-
-
-/* ================================
-   VERY SMALL MOBILE
-================================ */
-
-@media (max-width: 360px) {
-
-    .timeline {
-        padding-left: 1.2rem;
-    }
-
-    .timeline-marker {
-        left: -1.2rem;
-    }
-
-    .internship-card {
-        padding: 1rem;
-    }
-
-    .internship-badge {
-        font-size: 0.7rem;
-        padding: 0.5rem 0.75rem;
-    }
-
-    .timeline-title {
-        font-size: 1.05rem;
-    }
-}
 
 .tag {
     background: var(--bg-darker);
@@ -3182,7 +3699,7 @@ a.contact-value:hover {
     }
     
     .scroll-indicator {
-        bottom: 1rem;
+        display: none;
     }
     
     .badge-content {
@@ -3265,6 +3782,10 @@ a.contact-value:hover {
     .profile-image-glow {
         width: 110%;
         height: 110%;
+    }
+
+    .scroll-indicator{
+        display:none;
     }
     
     .about-stats {

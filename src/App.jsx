@@ -1032,8 +1032,8 @@ export default function App() {
               <div className="hero-greeting">
                 <span
                   className="greeting-text"
-                  data-text-en="Hello, I'm Farhan Ansari"
-                  data-text-ar="مرحباً، أنا"
+                  data-text-en="Hello, I'm"
+
                 >
                   Hello, I'm
                 </span>
@@ -1128,7 +1128,9 @@ export default function App() {
               <div className="hero-image-container">
                 <div className="profile-image-frame">
                   <div className="profile-image">
-                    <img src={profileImage} alt="Farhan Ansari" />
+                    <img src={profileImage} alt="Farhan Ansari" loading="eager"
+  decoding="async"
+  fetchPriority="high"/>
                   </div>
                 </div>
               </div>
@@ -1141,130 +1143,216 @@ export default function App() {
             </div>
             <span
               className="scroll-text"
-              data-text-en="Scroll Down"
-              data-text-ar="انتقل للأسفل"
+             
             >
               Scroll Down
             </span>
           </div>
         </section>
 
-        {/* About Section */}
         
-        <section id="about" className="section about-section">
-          <div className="section-container">
-            <div className="section-header">
-              <span className="section-number">01</span>
-              <h2 className="section-title">
-                <span className="title-bracket">&lt;</span>
-                <span
-                  className="title-text"
-                  data-text-en="About Me"
-                  data-text-ar="عني"
-                >
-                  About Me
-                </span>
-                <span className="title-bracket">/&gt;</span>
-              </h2>
-              <div className="section-line"></div>
+
+        {/* About Section */}
+<section id="about" className="section about-section">
+  <div className="section-container">
+
+    {/* Section Header */}
+    <div className="section-header">
+      <span className="section-number">01</span>
+
+      <h2 className="section-title">
+        <span className="title-bracket">&lt;</span>
+
+        <span
+          className="title-text"
+          data-text-en="About Me"
+          data-text-ar="عني"
+        >
+          About Me
+        </span>
+
+        <span className="title-bracket">/&gt;</span>
+      </h2>
+
+      <div className="section-line"></div>
+    </div>
+
+
+    {/* About Content */}
+    <div className="about-content">
+
+      {/* Left Content */}
+      <div className="about-text-wrapper">
+
+        <div className="about-intro">
+          <p className="about-text">
+            Software Engineer (BCA, 2026) with hands-on experience in
+            developing full-stack applications and a strong foundation
+            in programming and computer science fundamentals. Eager to
+            learn new technologies and contribute to building reliable,
+            high quality software solutions.
+          </p>
+        </div>
+
+
+        {/* About Highlights */}
+        <div className="about-stats">
+
+          <div className="stat-item">
+            <div className="stat-icon">
+              <i className="fas fa-code"></i>
             </div>
 
-            <div className="about-content">
-              <div className="about-text-wrapper">
-                <div className="about-intro">
-                  <p
-                    className="about-text"
-                    data-text-en="I'm a passionate Full Stack Developer with over 5 years of experience in building modern web applications and mobile solutions. I specialize in JavaScript technologies, React, Node.js, and creating beautiful user interfaces."
-                    data-text-ar="أنا مطور Full Stack شغوف مع أكثر من 5 سنوات من الخبرة في بناء تطبيقات الويب الحديثة والحلول الجوالة. أتخصص في تقنيات JavaScript، React، Node.js، وإنشاء واجهات مستخدم جميلة."
-                  >
-                    Software Engineer (BCA, 2026) with hands-on experience in
-                    developing full-stack applications and a strong foundation
-                    in programming and computer science fundamentals. Eager to
-                    learn new technologies and contribute to building reliable,
-                    high quality software solutions.
-                  </p>
-                </div>
-
-                <div className="about-stats">
-                  <div className="stat-item">
-                    <div
-                      className="stat-label"
-                      data-text-en="Full-Stack Development"
-                      data-text-ar="تطوير Full-Stack"
-                    >
-                      Full-Stack Development
-                    </div>
-                  </div>
-
-                  <div className="stat-item">
-                    <div
-                      className="stat-label"
-                      data-text-en="5-Month Internship"
-                      data-text-ar="تدريب لمدة 5 أشهر"
-                    >
-                      5 Months Internship
-                    </div>
-                  </div>
-
-                  <div className="stat-item">
-                    <div
-                      className="stat-label"
-                      data-text-en="Production Delivery"
-                      data-text-ar="تسليم برمجيات حقيقية"
-                    >
-                      Production Delivery
-                    </div>
-                  </div>
-                </div>
+            <div className="stat-content">
+              <div className="stat-label">
+                FullStack
+                <br/>
+                Development
               </div>
 
-              <div className="about-image-wrapper">
-                <div className="about-image-container">
-                  <div className="code-block">
-                    <div className="code-line">
-                      <span className="code-keyword">const</span>
-                      <span> </span>
-                      <span className="code-variable">developer</span>
-                      <span className="code-operator">=</span>
-                      <span className="code-brace">{"{"}</span>
-                    </div>
-                    <div className="code-line indent">
-                      <span className="code-property">name</span>
-                      <span className="code-operator">:</span>
-                      <span className="code-string">'Farhan Ansari'</span>
-                      <span className="code-comma">,</span>
-                    </div>
-                    <div className="code-line indent">
-                      <span className="code-property">Programming</span>
-                      <span className="code-operator">:</span>
-                      <span className="code-bracket">[</span>
-                      <span className="code-string">'Python'</span>
-                      <span className="code-comma">,</span>
-                      <span className="code-string">'JavaScript'</span>
-                      <span className="code-comma">,</span>
-                      <span className="code-string">'Java'</span>
-                      <span className="code-comma">,</span>
-                      <span className="code-string">'C'</span>
-                      <span className="code-bracket">]</span>
-                      <span className="code-comma">,</span>
-                    </div>
-                    <div className="code-line indent">
-                      <span className="code-property">Focus</span>
-                      <span className="code-operator">:</span>
-                      <span className="code-string">
-                        'Solution Engineering'
-                      </span>
-                    </div>
-                    <div className="code-line">
-                      <span className="code-brace">{"}"}</span>
-                      <span className="code-semicolon">;</span>
-                    </div>
-                  </div>
-                </div>
+              <div className="stat-description">
+                End-to-end web
+                
+                application development
               </div>
             </div>
           </div>
-        </section>
+
+
+          <div className="stat-item">
+            <div className="stat-icon">
+              <i className="fas fa-briefcase"></i>
+            </div>
+
+            <div className="stat-content">
+              <div className="stat-label">
+                Internship <br/>
+                Experience
+              </div>
+
+              <div className="stat-description">
+                Hands-on industry
+                
+                experience
+              </div>
+            </div>
+          </div>
+
+
+          <div className="stat-item">
+            <div className="stat-icon">
+              <i className="fas fa-rocket"></i>
+            </div>
+
+            <div className="stat-content">
+              <div className="stat-label">
+                Production
+               <br/>
+                Delivery
+              </div>
+
+              <div className="stat-description">
+                Building & shipping
+                
+                real-world solutions
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      {/* Code Block */}
+      <div className="about-image-wrapper">
+        <div className="about-image-container">
+
+          <div className="code-block">
+
+            {/* Code Window Header */}
+            <div className="code-window-header">
+              <div className="code-window-dots">
+                <span className="window-dot dot-red"></span>
+                <span className="window-dot dot-yellow"></span>
+                <span className="window-dot dot-green"></span>
+              </div>
+
+              <span className="code-window-title">
+                developer.js
+              </span>
+            </div>
+
+
+            {/* Code */}
+            <div className="code-content">
+
+              <div className="code-line">
+                <span className="code-keyword">const</span>
+                <span>&nbsp;</span>
+                <span className="code-variable">developer</span>
+                <span className="code-operator">&nbsp;=&nbsp;</span>
+                <span className="code-brace">{"{"}</span>
+              </div>
+
+
+              <div className="code-line indent">
+                <span className="code-property">name</span>
+                <span className="code-operator">:&nbsp;</span>
+                <span className="code-string">
+                  'Farhan Ansari'
+                </span>
+                <span className="code-comma">,</span>
+              </div>
+
+
+              <div className="code-line indent">
+                <span className="code-property">Programming</span>
+                <span className="code-operator">:&nbsp;</span>
+
+                <span className="code-bracket">[</span>
+
+                <span className="code-string">'Python'</span>
+                <span className="code-comma">,&nbsp;</span>
+
+                <span className="code-string">'JavaScript'</span>
+                <span className="code-comma">,&nbsp;</span>
+
+                <span className="code-string">'Java'</span>
+                <span className="code-comma">,&nbsp;</span>
+
+                <span className="code-string">'C'</span>
+
+                <span className="code-bracket">]</span>
+                <span className="code-comma">,</span>
+              </div>
+
+
+              <div className="code-line indent">
+                <span className="code-property">Focus</span>
+                <span className="code-operator">:&nbsp;</span>
+
+                <span className="code-string">
+                  'Solution Engineering'
+                </span>
+              </div>
+
+
+              <div className="code-line">
+                <span className="code-brace">{"}"}</span>
+                <span className="code-semicolon">;</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
         {/* Education */}
         <section id="about" className="section about-section">
@@ -1586,131 +1674,74 @@ export default function App() {
           </div>
         </section>
 
+        
         {/* Experience Section */}
-        <section id="experience" className="section experience-section">
-          <div className="section-container">
-            <div className="section-header">
-              <span className="section-number">04</span>
-              <h2 className="section-title">
-                <span className="title-bracket">&lt;</span>
-                <span
-                  className="title-text"
-                  data-text-en="Experience"
-                  data-text-ar="الخبرة"
-                >
-                  Internship Experience
-                </span>
-                <span className="title-bracket">/&gt;</span>
-              </h2>
-              <div className="section-line"></div>
+<section id="experience" className="section experience-section">
+  <div className="section-container">
+
+    {/* Section Header */}
+    <div className="section-header">
+      <span className="section-number">04</span>
+
+      <h2 className="section-title">
+        <span className="title-bracket">&lt;</span>
+
+        <span className="title-text">
+          Experience
+        </span>
+
+        <span className="title-bracket">/&gt;</span>
+      </h2>
+
+      <div className="section-line"></div>
+    </div>
+
+
+    {/* Experience */}
+    <div className="experience-list">
+
+      <article className="experience-entry">
+
+        <div className="experience-header">
+
+          <div className="experience-heading">
+
+            <div className="experience-company">
+              UnionSys Technologies
+              <span className="company-location">
+                · Pune, India
+              </span>
             </div>
 
-            <div className="timeline">
-              {/* UnionSys Technologies - Internship */}
-              <div className="timeline-item">
-                <div className="timeline-marker"></div>
+            <h3 className="experience-role">
+              Software Engineering Intern
+            </h3>
 
-                <div className="timeline-content internship-card">
-                  <div className="experience-top">
-                    <div>
-                      <div className="timeline-year">OCT 2025 — MAR 2026</div>
-
-                      <h3
-                        className="timeline-title"
-                        data-text-en="Software Development Intern"
-                        data-text-ar="متدرب تطوير برمجيات"
-                      >
-                        Software Engineering
-                      </h3>
-
-                      <div className="timeline-company">
-                        <i className="fas fa-building"></i>
-                        UnionSys Technologies
-                        <span className="company-location">· Pune, India</span>
-                      </div>
-                    </div>
-
-                    <div className="internship-badge">
-                      <i className="fas fa-graduation-cap"></i>
-                      Internship
-                    </div>
-                  </div>
-
-                  <div className="experience-divider"></div>
-
-                  <p
-                    className="timeline-description"
-                    data-text-en="Contributed to real-world software development across frontend development, backend API integration, database operations, and application maintenance."
-                    data-text-ar="المساهمة في تطوير البرمجيات في بيئة عمل حقيقية، بما في ذلك تطوير الواجهات الأمامية وتكامل واجهات برمجة التطبيقات وعمليات قواعد البيانات وصيانة التطبيقات."
-                  >
-                    Contributed to real-world software development across
-                    Backend development,Frontend Devlopment,backend API
-                    Development,backend API integration, database operations,
-                    and application maintenance.
-                  </p>
-
-                  <div className="experience-work">
-                    <div className="work-item">
-                      <i className="fas fa-check-circle"></i>
-                      <span>
-                        Developed and maintained features for the company's
-                        official website.
-                      </span>
-                    </div>
-
-                    <div className="work-item">
-                      <i className="fas fa-check-circle"></i>
-                      <span>
-                        Build Django REST APIs and integrated frontend for
-                        real-world applications.
-                      </span>
-                    </div>
-
-                    <div className="work-item">
-                      <i className="fas fa-check-circle"></i>
-                      <span>
-                        Worked with Django ORM and PostgreSQL for application
-                        data operations.
-                      </span>
-                    </div>
-
-                    <div className="work-item">
-                      <i className="fas fa-check-circle"></i>
-                      <span>
-                        Contributed to an Airline Customer Support & Complaint
-                        Management System.
-                      </span>
-                    </div>
-
-                    <div className="work-item">
-                      <i className="fas fa-check-circle"></i>
-                      <span>
-                        Fixed bugs, implemented features, and supported ongoing
-                        application maintenance.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="experience-footer">
-                    <div className="experience-label">
-                      <i className="fas fa-code"></i>
-                      Technologies
-                    </div>
-
-                    <div className="timeline-tags">
-                      <span className="tag">React.js</span>
-                      <span className="tag">Django</span>
-                      <span className="tag">Django REST Framework</span>
-                      <span className="tag">PostgreSQL</span>
-                      <span className="tag">Django ORM</span>
-                      <span className="tag">REST APIs</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
-        </section>
+
+          <div className="experience-date">
+            OCT 2025 — MAR 2026
+          </div>
+
+        </div>
+
+
+        <p className="experience-description">
+          Worked on real-world software applications, contributing to
+          frontend and backend development, REST API development,
+          database operations, and application maintenance. Developed
+          and maintained website features, integrated backend services
+          with frontend applications, worked with Django ORM and
+          PostgreSQL, and fixed bugs while implementing new features
+          to support ongoing application development.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+</section>
 
         {/* Projects Section */}
         <section id="projects" className="section projects-section">
