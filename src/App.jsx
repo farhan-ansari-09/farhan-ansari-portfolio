@@ -1568,8 +1568,8 @@ export default function App() {
                   </div>
 
                   <div className="tech-card">
-                    <i className="devicon-flask-plain colored"></i>
-                    Flask
+                    <i className="devicon-fastapi-plain colored"></i>
+                    FastAPI
                   </div>
 
                   <div className="tech-card">
